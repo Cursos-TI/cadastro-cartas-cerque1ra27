@@ -10,6 +10,8 @@ int população1;
 float area1;
 float pib1;
 int pontos1;
+float densidadep1;
+float pibpercapita1;
 
 //-VARIÁVEIS-CARTA 2-
 char estado2[30];
@@ -19,6 +21,8 @@ int população2;
 float area2;
 float pib2;
 int pontos2;
+float densidadep2;
+float pibpercapita2;
 
 //-INÍCIO CARTA 1-
  printf("CARTA 1 INICIADA COM SUCESSO!\n\n");
@@ -26,15 +30,15 @@ int pontos2;
 
 //-ENTRADA E SAÍDA CARTA 1-
  printf("Digite o Estado: ");
- scanf(" %[^\n]", &estado1); // LEITURA DE PALAVRAS COMPOSTAS
+ scanf(" %[^\n]", estado1); // LEITURA DE PALAVRAS COMPOSTAS
  printf("Estado Digitado: %s\n", estado1);
 
  printf("Digite o Código: ");
- scanf("%s", &codigo1);
+ scanf("%s", codigo1);
  printf("O Código digitado foi: %s\n", codigo1);
 
  printf("Digite o Nome da Cidade: ");
- scanf(" %[^\n]", &nome1);  
+ scanf(" %[^\n]", nome1);  
  printf("O Nome da Cidade digitada foi: %s\n", nome1);
 
  printf("Digite a População: ");
@@ -54,26 +58,30 @@ scanf("%d", &pontos1);
 printf("O número de pontos digitado foi: %d\n\n ", pontos1);
 printf("CARTA 1 FINALIZADA COM SUCESSO! \n\n");
 
+densidadep1 = (float) população1 / area1;
+pibpercapita1 = (float) pib1 / população1;
+
 
 //-VARIÉVEL-INICIO-
 char iniciar2[10];
+
 //-INICIO CARTA 2-
 printf("Digite OK para iniciar CARTA 2! ");
-scanf("%s", &iniciar2);
+scanf("%s", iniciar2);
 printf("\n CARTA 2 INICIADA COM SUCESSO!\n\n");
 
 
 //-ENTRADA E SAÍDA-CARTA 2-
 printf("Digite o Estado: ");
- scanf(" %[^\n]", &estado2);
+ scanf(" %[^\n]", estado2);
  printf("Estado Digitado: %s\n", estado2);
 
  printf("Digite o Código: ");
- scanf("%s", &codigo2);
+ scanf("%s", codigo2);
  printf("O código digitado foi: %s\n", codigo2);
 
  printf("Digite o Nome da Cidade: ");
- scanf(" %[^\n]", &nome2);  
+ scanf(" %[^\n]", nome2);  
  printf("O Nome da Cidade digitada foi: %s\n", nome2);
 
  printf("Digite a População: ");
@@ -90,18 +98,24 @@ printf("O valor do PIB digitado foi: %.2f\n", pib2);
 
 printf("Digite o número de Pontos Turísticos: ");
 scanf("%d", &pontos2);
-printf("O número de pontos digitado foi: %.d\n\n ", pontos2);
+printf("O número de pontos digitado foi: %d\n\n ", pontos2);
 printf("CARTA 2 FINALIZADA COM SUCESSO! \n\n");
+
+densidadep2 = (float) população2 / area2;
+pibpercapita2 = (float) pib2 / população2;
+
 
 
 //-VARIAVEL-RESULTADO-
 char resultado[10];
+
 //-RESULTADO-
 printf("Digite OK para obter a comparação das cartas! ");
-scanf("%s", &resultado);
+scanf("%s", resultado);
 
 
 //-SAÍDA DE DADOS-RESULTADO-
+
 printf("\n\nCARTA 1!\n");
 printf("Estado: %s\n", estado1);
 printf("Código: %s\n", codigo1);
@@ -109,7 +123,9 @@ printf("Nome da Cidade: %s\n", nome1);
 printf("A população: %d\n", população1);
 printf("Área: %.2f\n", area1);
 printf("Valor do PIB: %.2f\n", pib1);
-printf("Número de Pontos: %d\n\n ", pontos1);
+printf("Número de Pontos: %d\n", pontos1);
+printf("Densidade Populacional: %.2f\n", densidadep1);
+printf("PIB per Capita: %.2f\n", pibpercapita1);
 
 printf("CARTA 2!\n");
 printf("Estado: %s\n", estado2);
@@ -118,7 +134,9 @@ printf("Nome da Cidade: %s\n", nome2);
 printf("A população: %d\n", população2);
 printf("Área: %.2f\n", area2);
 printf("Valor do PIB: %.2f\n", pib2);
-printf("Número de Pontos: %d\n\n ", pontos2);
+printf("Número de Pontos: %d\n", pontos2);
+printf("Densidade Populacional: %.2f\n", densidadep2);
+printf("PIB per Capita: %.2f\n", pibpercapita2);
 printf("RESULTADO FINALIZADO!");
 
 return 0;
