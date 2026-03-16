@@ -1,168 +1,226 @@
 #include <stdio.h>
-int main(){
 
+int main() {
 
-//-VARIÁVEIS-CARTA 1-
-char estado1[30];
-char codigo1[10];
-char nome1[30];
-unsigned long int população1;
-float area1;
-float pib1;
-int pontos1;
-float densidadep1;
-float pibpercapita1;
-float superpoder1;
+    // - VARIÁVEIS CARTA 1 -
+    char estado1[30];
+    char codigo1[10];
+    char nome1[30];
+    unsigned long int populacao1;
+    float area1;
+    float pib1;
+    int pontos1;
+    float densidadep1;
+    float pibpercapita1;
+    float superpoder1;
 
-//-VARIÁVEIS-CARTA 2-
-char estado2[30];
-char codigo2[10];
-char nome2[30];
-unsigned long int população2;
-float area2;
-float pib2;
-int pontos2;
-float densidadep2;
-float pibpercapita2;
-float superpoder2;
+    // - VARIÁVEIS CARTA 2 -
+    char estado2[30];
+    char codigo2[10];
+    char nome2[30];
+    unsigned long int populacao2;
+    float area2;
+    float pib2;
+    int pontos2;
+    float densidadep2;
+    float pibpercapita2;
+    float superpoder2;
 
-//-INÍCIO CARTA 1-
-printf("Bem-Vindo ao Super Trunfo !\n");
- printf("CARTA 1 INICIADA COM SUCESSO!\n\n");
+    // - INÍCIO CARTA 1 -
+    printf("Bem-vindo ao Super Trunfo!\n");
+    printf("CARTA 1 INICIADA COM SUCESSO!\n\n");
 
+    // - ENTRADA E SAÍDA CARTA 1 -
+    printf("Digite o estado: ");
+    scanf(" %[^\n]", estado1); // Leitura de palavras compostas
+    printf("Estado digitado: %s\n", estado1);
 
-//-ENTRADA E SAÍDA CARTA 1-
- printf("Digite o Estado: ");
- scanf(" %[^\n]", estado1); // LEITURA DE PALAVRAS COMPOSTAS
- printf("Estado Digitado: %s\n", estado1);
+    printf("Digite o codigo: ");
+    scanf("%s", codigo1);
+    printf("O codigo digitado foi: %s\n", codigo1);
 
- printf("Digite o Código: ");
- scanf("%s", codigo1);
- printf("O Código digitado foi: %s\n", codigo1);
+    printf("Digite o nome da cidade: ");
+    scanf(" %[^\n]", nome1);
+    printf("O nome da cidade digitada foi: %s\n", nome1);
 
- printf("Digite o Nome da Cidade: ");
- scanf(" %[^\n]", nome1);  
- printf("O Nome da Cidade digitada foi: %s\n", nome1);
+    printf("Digite a populacao: ");
+    scanf("%lu", &populacao1);
+    printf("A populacao digitada foi: %lu\n", populacao1);
 
- printf("Digite a População: ");
- scanf("%ld", &população1);
- printf("A população digitada foi: %ld\n", população1);
+    printf("Digite a area: ");
+    scanf("%f", &area1);
+    printf("A area digitada foi: %.2f\n", area1);
 
-printf("Digite a Área: ");
-scanf("%f", &area1);
-printf("A Área digitada foi: %.2f\n", area1);
+    printf("Digite o valor do PIB: ");
+    scanf("%f", &pib1);
+    printf("O valor do PIB digitado foi: %.2f\n", pib1);
 
-printf("Digite o valor do PIB: ");
-scanf("%f", &pib1);
-printf("O valor do PIB digitado foi: %.2f\n", pib1);
+    printf("Digite o numero de pontos turisticos: ");
+    scanf("%d", &pontos1);
+    printf("O numero de pontos digitado foi: %d\n\n", pontos1);
+    printf("CARTA 1 FINALIZADA COM SUCESSO!\n\n");
 
-printf("Digite o número de Pontos Turísticos: ");
-scanf("%d", &pontos1);
-printf("O número de pontos digitado foi: %d\n\n ", pontos1);
-printf("CARTA 1 FINALIZADA COM SUCESSO! \n\n");
+    densidadep1 = (float) populacao1 / area1;
+    pibpercapita1 = (float) pib1 / populacao1;
 
-densidadep1 = (float) população1 / area1;
-pibpercapita1 = (float) pib1 / população1;
+    // - VARIÁVEL INÍCIO -
+    char iniciar2[10];
 
-//-VARIÉVEL-INICIO-
-char iniciar2[10];
+    // - INÍCIO CARTA 2 -
+    printf("Digite OK para iniciar a CARTA 2: ");
+    scanf("%s", iniciar2);
+    printf("\nCARTA 2 INICIADA COM SUCESSO!\n\n");
 
-//-INICIO CARTA 2-
-printf("Digite OK para iniciar CARTA 2! ");
-scanf("%s", iniciar2);
-printf("\n CARTA 2 INICIADA COM SUCESSO!\n\n");
+    // - ENTRADA E SAÍDA CARTA 2 -
+    printf("Digite o estado: ");
+    scanf(" %[^\n]", estado2); // Leitura de palavras compostas
+    printf("Estado digitado: %s\n", estado2);
 
+    printf("Digite o codigo: ");
+    scanf("%s", codigo2);
+    printf("O codigo digitado foi: %s\n", codigo2);
 
-//-ENTRADA E SAÍDA-CARTA 2-
-printf("Digite o Estado: ");
- scanf(" %[^\n]", estado2);// LEITURA DE PALAVRAS COMPOSTAS
- printf("Estado Digitado: %s\n", estado2);
+    printf("Digite o nome da cidade: ");
+    scanf(" %[^\n]", nome2);
+    printf("O nome da cidade digitada foi: %s\n", nome2);
 
- printf("Digite o Código: ");
- scanf("%s", codigo2);
- printf("O código digitado foi: %s\n", codigo2);
+    printf("Digite a populacao: ");
+    scanf("%lu", &populacao2);
+    printf("A populacao digitada foi: %lu\n", populacao2);
 
- printf("Digite o Nome da Cidade: ");
- scanf(" %[^\n]", nome2);  
- printf("O Nome da Cidade digitada foi: %s\n", nome2);
+    printf("Digite a area: ");
+    scanf("%f", &area2);
+    printf("A area digitada foi: %.2f\n", area2);
 
- printf("Digite a População: ");
- scanf("%ld", &população2);
- printf("A população digitada foi: %ld\n", população2);
+    printf("Digite o valor do PIB: ");
+    scanf("%f", &pib2);
+    printf("O valor do PIB digitado foi: %.2f\n", pib2);
 
-printf("Digite a Área: ");
-scanf("%f", &area2);
-printf("A Área digitada foi: %.2f\n", area2);
+    printf("Digite o numero de pontos turisticos: ");
+    scanf("%d", &pontos2);
+    printf("O numero de pontos digitado foi: %d\n\n", pontos2);
+    printf("CARTA 2 FINALIZADA COM SUCESSO!\n\n");
 
-printf("Digite o valor do PIB: ");
-scanf("%f", &pib2);
-printf("O valor do PIB digitado foi: %.2f\n", pib2);
+    densidadep2 = (float) populacao2 / area2;
+    pibpercapita2 = (float) pib2 / populacao2;
 
-printf("Digite o número de Pontos Turísticos: ");
-scanf("%d", &pontos2);
-printf("O número de pontos digitado foi: %d\n\n ", pontos2);
-printf("CARTA 2 FINALIZADA COM SUCESSO! \n\n");
+    // - VARIÁVEL RESULTADO -
+    char resultado[10];
 
-densidadep2 = (float) população2 / area2;
-pibpercapita2 = (float) pib2 / população2;
+    // - RESULTADO -
+    printf("Digite OK para obter o resultado das cartas: ");
+    scanf("%s", resultado);
 
-//-VARIAVEL-RESULTADO-
-char resultado[10];
+    // - SAÍDA DE DADOS / RESULTADO -
+    printf("\n\nCARTA 1!\n");
+    printf("Estado: %s\n", estado1);
+    printf("Codigo: %s\n", codigo1);
+    printf("Nome da cidade: %s\n", nome1);
+    printf("Populacao: %lu\n", populacao1);
+    printf("Area: %.2f\n", area1);
+    printf("Valor do PIB: %.2f\n", pib1);
+    printf("Numero de pontos: %d\n", pontos1);
+    printf("Densidade populacional: %.2f\n", densidadep1);
+    printf("PIB per capita: %.2f\n", pibpercapita1);
 
-//-RESULTADO-
-printf("Digite OK para obter o resultado das cartas! ");
-scanf("%s", resultado);
+    // Cálculo carta 1
+    superpoder1 = populacao1 + area1 + pib1 + pontos1 + pibpercapita1 + (1 / densidadep1);
+    printf("Superpoder: %.2f\n\n", superpoder1);
 
-//-SAÍDA DE DADOS-RESULTADO-
-printf("\n\nCARTA 1!\n");
-printf("Estado: %s\n", estado1);
-printf("Código: %s\n", codigo1);
-printf("Nome da Cidade: %s\n", nome1);
-printf("A população: %ld\n", população1);
-printf("Área: %.2f\n", area1);
-printf("Valor do PIB: %.2f\n", pib1);
-printf("Número de Pontos: %d\n", pontos1);
-printf("Densidade Populacional: %.2f\n", densidadep1);
-printf("PIB per Capita: %.2f\n", pibpercapita1);
+    printf("CARTA 2!\n");
+    printf("Estado: %s\n", estado2);
+    printf("Codigo: %s\n", codigo2);
+    printf("Nome da cidade: %s\n", nome2);
+    printf("Populacao: %lu\n", populacao2);
+    printf("Area: %.2f\n", area2);
+    printf("Valor do PIB: %.2f\n", pib2);
+    printf("Numero de pontos: %d\n", pontos2);
+    printf("Densidade populacional: %.2f\n", densidadep2);
+    printf("PIB per capita: %.2f\n", pibpercapita2);
 
-//cálculo carta 1
-superpoder1 = população1 + area1 + pib1 + pontos1 + pibpercapita1+ (1 / densidadep1);
-printf("Super Poder: %.2f\n\n", superpoder1);
+    // Cálculo carta 2
+    superpoder2 = populacao2 + area2 + pib2 + pontos2 + pibpercapita2 + (1 / densidadep2);
+    printf("Superpoder: %.2f\n\n", superpoder2);
 
+    // SAÍDA DE DADOS / COMPARAÇÃO
+    printf("Finalizado! Confira a comparacao das cartas:\n\n");
 
-printf("CARTA 2!\n");
-printf("Estado: %s\n", estado2);
-printf("Código: %s\n", codigo2);
-printf("Nome da Cidade: %s\n", nome2);
-printf("A população: %ld\n", população2);
-printf("Área: %.2f\n", area2);
-printf("Valor do PIB: %.2f\n", pib2);
-printf("Número de Pontos: %d\n", pontos2);
-printf("Densidade Populacional: %.2f\n", densidadep2);
-printf("PIB per Capita: %.2f\n", pibpercapita2);
+    // Populacao
+    printf("Carta 1 = %s | Populacao: %lu\n", estado1, populacao1);
+    printf("Carta 2 = %s | Populacao: %lu\n", estado2, populacao2);
+    if (populacao1 > populacao2) {
+        printf("== Carta 1 venceu! ==\n\n");
+    } else if (populacao2 > populacao1) {
+        printf("== Carta 2 venceu! ==\n\n");
+    } else {
+        printf("== Empate! ==\n\n");
+    }
 
-//cálculo carta 2
-superpoder2 = população2 + area2 + pib2 + pontos2 + pibpercapita2 + (1 / densidadep2);
-printf("Super Poder: %.2f\n\n", superpoder2);
+    // Area
+    printf("Carta 1 = Area: %.2f\n", area1);
+    printf("Carta 2 = Area: %.2f\n", area2);
+    if (area1 > area2) {
+        printf("== Carta 1 venceu! ==\n\n");
+    } else if (area2 > area1) {
+        printf("== Carta 2 venceu! ==\n\n");
+    } else {
+        printf("== Empate! ==\n\n");
+    }
 
+    // PIB
+    printf("Carta 1 = PIB: %.2f\n", pib1);
+    printf("Carta 2 = PIB: %.2f\n", pib2);
+    if (pib1 > pib2) {
+        printf("== Carta 1 venceu! ==\n\n");
+    } else if (pib2 > pib1) {
+        printf("== Carta 2 venceu! ==\n\n");
+    } else {
+        printf("== Empate! ==\n\n");
+    }
 
-//SAIDA DE DADOS Comparação 
-printf("finalizado, confira a Comparação das Cartas! \n\n");
+    // Pontos turisticos
+    printf("Carta 1 = Pontos turisticos: %d\n", pontos1);
+    printf("Carta 2 = Pontos turisticos: %d\n", pontos2);
+    if (pontos1 > pontos2) {
+        printf("== Carta 1 venceu! ==\n\n");
+    } else if (pontos2 > pontos1) {
+        printf("== Carta 2 venceu! ==\n\n");
+    } else {
+        printf("== Empate! ==\n\n");
+    }
 
-printf("População: Carta 1 venceu (%d)\n", população1 > população2);
+    // Densidade populacional (MENOR vence)
+    printf("Carta 1 = Densidade: %.2f\n", densidadep1);
+    printf("Carta 2 = Densidade: %.2f\n", densidadep2);
+    if (densidadep1 < densidadep2) {
+        printf("== Carta 1 venceu! ==\n\n");
+    } else if (densidadep2 < densidadep1) {
+        printf("== Carta 2 venceu! ==\n\n");
+    } else {
+        printf("== Empate! ==\n\n");
+    }
 
-printf("Área: Carta 1 venceu (%d)\n", area1 > area2);
+    // PIB per capita
+    printf("Carta 1 = PIB per capita: %.2f\n", pibpercapita1);
+    printf("Carta 2 = PIB per capita: %.2f\n", pibpercapita2);
+    if (pibpercapita1 > pibpercapita2) {
+        printf("== Carta 1 venceu! ==\n\n");
+    } else if (pibpercapita2 > pibpercapita1) {
+        printf("== Carta 2 venceu! ==\n\n");
+    } else {
+        printf("== Empate! ==\n\n");
+    }
 
-printf("PIB: Carta 1 venceu (%d)\n", pib1 > pib2);
+    // Superpoder
+    printf("Superpoder Carta 1 = %.2f\n", superpoder1);
+    printf("Superpoder Carta 2 = %.2f\n", superpoder2);
+    if (superpoder1 > superpoder2) {
+        printf("== Carta 1 venceu! ==\n\n");
+    } else if (superpoder2 > superpoder1) {
+        printf("== Carta 2 venceu! ==\n\n");
+    } else {
+        printf("== Empate! ==\n\n");
+    }
 
-printf("Pontos Turísticos: Carta 1 venceu (%d)\n", pontos1 > pontos2);
-
-printf("Densidade Populacional: Carta 1 venceu (%d)\n", densidadep1 < densidadep2); //densidade menor vence
-
-printf("PIB per Capita: Carta 1 venceu (%d)\n", pibpercapita1 > pibpercapita2);
-
-printf("Super Poder: Carta 1 venceu (%d)\n", superpoder1 > superpoder2);
-
-return 0;
-
+    return 0;
 }
